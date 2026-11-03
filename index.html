@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101b17" />
+  <title>NOIR Mobile — Made for your everyday</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topline">COMPLIMENTARY DELIVERY ON ORDERS OVER <b>₹25,000</b></div>
+
+  <header class="wrap">
+    <a class="brand" href="#home">NOIR<span>.</span><small>MOBILE STUDIO</small></a>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#story">Our story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="head-actions">
+      <button class="iconbtn search" aria-label="Search" onclick="document.querySelector('#shop').scrollIntoView()">⌕</button>
+      <button class="iconbtn" aria-label="Shopping bag" onclick="showCart()">♧<span class="count" id="cartCount">0</span></button>
+      <button class="iconbtn menu" aria-label="Menu" onclick="document.querySelector('#shop').scrollIntoView()">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Technology, considered.</div>
+        <h1>More than a<br><em>mobile.</em></h1>
+        <p>Thoughtfully chosen devices, crafted for the way you live, work and create.</p>
+        <a class="btn" href="#shop">DISCOVER THE COLLECTION <span>→</span></a>
+        <div class="subnote">Curated devices · Personal service · Peace of mind</div>
+      </div>
+      <div class="hero-product">
+        <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=85" alt="Premium smartphone" />
+        <div class="hero-tag"><div><strong>01 / 25</strong>THE NEW<br>STANDARD</div></div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="perks">
+        <div class="perk"><i>✦</i><div>Authentic, always<small>100% genuine products</small></div></div>
+        <div class="perk"><i>⌁</i><div>Delivery, made easy<small>Free above ₹25,000</small></div></div>
+        <div class="perk"><i>◇</i><div>Care you can count on<small>Official warranty</small></div></div>
+        <div class="perk"><i>↗</i><div>Here to help<small>Friendly expert support</small></div></div>
+      </div>
+
+      <section class="section" id="shop">
+        <div class="section-head">
+          <div><div class="kicker">The edit / 2025</div><h2>Find your next favourite.</h2></div>
+          <a class="viewall" href="#shop">VIEW ALL PRODUCTS ↗</a>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-filter="All">All pieces</button>
+          <button class="filter" data-filter="Phones">Phones</button>
+          <button class="filter" data-filter="Audio">Audio</button>
+          <button class="filter" data-filter="Accessories">Accessories</button>
+        </div>
+        <div class="grid" id="productGrid"></div>
+      </section>
+
+      <section class="banner" id="story">
+        <div class="banner-copy">
+          <div class="kicker">The NOIR promise</div>
+          <h2>A little more considered.</h2>
+          <p>Buying a device should feel as good as using it. We handpick the essentials, make advice simple, and stay by your side after checkout.</p>
+          <a class="viewall" href="#contact">GET TO KNOW US ↗</a>
+        </div>
+        <div class="banner-art">
+          <img src="https://images.unsplash.com/photo-1603313011101-320f26a4f6f6?auto=format&fit=crop&w=700&q=85" alt="Premium headphones" />
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="kicker">A note from NOIR</div>
+        <h2>Good things, occasionally.</h2>
+        <p>New arrivals, thoughtful tips and little extras. No noise.</p>
+        <form class="signup" onsubmit="event.preventDefault();toast('Thanks for joining the NOIR list!')">
+          <input type="email" placeholder="Your email address" required aria-label="Your email address" />
+          <button type="submit">COUNT ME IN →</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footgrid">
+        <div><div class="footbrand">NOIR.</div><p>A considered little corner for the technology that goes everywhere with you.</p><p>Instagram&nbsp;&nbsp; Pinterest&nbsp;&nbsp; YouTube</p></div>
+        <div><h4>EXPLORE</h4><a href="#shop">Shop all</a><a href="#shop">Phones</a><a href="#shop">Audio</a><a href="#story">Our story</a></div>
+        <div><h4>WE'RE HERE</h4><a href="mailto:hello@noirmobile.in">hello@noirmobile.in</a><a href="tel:+919876543210">+91 98765 43210</a><a href="#contact">Mon–Sat, 10am–7pm</a></div>
+        <div><h4>THE DETAILS</h4><a href="#contact">Shipping & returns</a><a href="#contact">Warranty</a><a href="#contact">Privacy policy</a></div>
+      </div>
+      <div class="copyright"><span>© 2025 NOIR Mobile Studio. Demo store.</span><span>Made for the everyday.</span></div>
+    </div>
+  </footer>
+  <div class="toast" id="toast"></div>
+</body>
+</html>
